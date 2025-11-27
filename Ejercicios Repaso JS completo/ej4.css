@@ -1,0 +1,53 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form {
+    background-color: white;
+    padding: 15px;
+    border: 1px solid #ccc;
+    width: 400px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 6px 0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+    width: 95%;
+    padding: 5px;
+    border: 1px solid #a9a9a9;
+}
+
+.botones {
+    text-align: center; 
+    margin-top: 12px;
+}
+
+input[type="button"],
+input[type="reset"] {
+    padding: 8px 15px;
+    margin-top: 10px;
+    border: 1px solid #666;
+    background-color: #e6e6e6;
+    cursor: pointer;
+}
+
+input[type="button"]:hover,
+input[type="reset"]:hover {
+    background-color: #d4d4d4;
+}

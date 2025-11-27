@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1 - Título</title>
+</head>
+<body>
+    
+    <input type="button" value="Mostrar titulo" name="titulo" onclick="mostrarTitulo()">
+    <div id="resultado1"></div><br><br><br>
+
+<form name="form1">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" name="nombre"><br><br>
+    <button name="boton">Enviar</button><br><br>
+</form>
+
+<form name="form2">
+    <label for="Apellido">Apellido:</label><br>
+    <input type="text" name="apellido"><br><br>
+    <button name="boton">Enviar</button><br>
+</form>
+
+<button onclick="mostrarInfoDocument()">Mostrar info de forms[]</button>
+<div id="salida"></div><br>
+
+<a href="https://www.example.com" target="_blank">Ir a Example</a>
+<a href="https://www.google.com" target="_blank">Ir a Google</a>
+<br><br>
+<button onclick="mostrarEnlaces()">Mostrar info de enlaces</button>
+<div id="salida2"></div><br><br>
+
+<button name="cookies" onclick="cookiesHabilitadas()">Cookies</button>
+<div id="cookies"></div>
+
+<button name="tituloNuevo" onclick="cambiarTitulo()">Cambiar título</button>
+<div id="tituloNuevo"></div>
+
+<script src="ejercicios.js"></script>
+</body>
+</html>

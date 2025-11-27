@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="portfolio.css">
+    <title>Portafolio Juan Pérez</title>
+</head>
+<body>
+    <header>
+        <h1>Juan Pérez</h1>
+        <nav>
+            <ul>
+                <li><a href="#presentacion">Presentación</a></li>
+                <li><a href="#experiencia">Experiencia</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="presentacion">
+            <h2>Presentación</h2>
+            <p><strong>Desarrollador web con 5 años de experiencia</strong>, especializado en JavaScript, HTML5 y CSS3. Me gusta crear <em>sitios atractivos y funcionales</em>.</p>
+            <blockquote>
+                "El diseño no es solo cómo se ve sino cómo funciona." - Steve Jobs
+            </blockquote>
+        </section>
+        
+        <section id="experiencia">
+            <h2>Experiencia profesional</h2>
+            <ol>
+                <li>
+                    Empresa A
+                    <ul>
+                        <li>Desarrollador Frontend</li>
+                        <li>2018 - 2021</li>
+                    </ul>
+                </li>
+                <li>
+                    Empresa B
+                    <ul>
+                        <li>Desarrollador Backend</li>
+                        <li>2021 - Presente</li>
+                    </ul>
+                </li>
+            </ol>
+            <h3>Habilidades técnicas</h3>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Habilidad</th>
+                        <th>Nivel</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Avanzado</td>
+                    </tr>
+                    <tr>
+                        <td>HTML5</td>
+                        <td>Experto</td>
+                    </tr>
+                    <tr>
+                        <td>CSS3</td>
+                        <td>Intermedio</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        
+        <section id="proyectos">
+            <h2>Proyectos destacados</h2>
+            <figure>
+                <img src="imagen-proyecto1.jpg" alt="Captura Proyecto 1">
+                <figcaption>Sitio web e-commerce desarrollado en React</figcaption>
+            </figure>
+            <figure>
+                <img src="imagen-proyecto2.jpg" alt="Captura Proyecto 2">
+                <figcaption>Aplicación móvil con Kotlin y Firebase</figcaption>
+            </figure>
+            <div>
+                <video controls width="320">
+                    <source src="video-proyecto.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
+                </video>
+                <audio controls>
+                    <source src="audio-proyecto.mp3" type="audio/mp3">
+                    Tu navegador no soporta el elemento de audio.
+                </audio>
+            </div>
+        </section>
+        
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre"><br>
+                
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo"><br>
+                
+                <label for="asunto">Asunto:</label>
+                <select id="asunto" name="asunto">
+                    <option value="propuesta">Propuesta</option>
+                    <option value="consulta">Consulta</option>
+                    <option value="otro">Otro</option>
+                </select><br>
+                
+                    <legend>Intereses:</legend>
+                    <input type="checkbox" id="web" name="interes" value="Web">
+                    <label class="checkbox" for="web">Desarrollo Web</label>
+                    <input type="checkbox" id="movil" name="interes" value="Movil">
+                    <label class="checkbox" for="movil">Desarrollo Móvil</label><br>
+                
+                
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="4" cols="30"></textarea><br>
+                
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+    
+    <footer>
+        <p>© 2025 Juan Pérez - Todos los derechos reservados.</p>
+        <small>Fuente: Asuntos DAW</small>
+    </footer>
+</body>
+</html>

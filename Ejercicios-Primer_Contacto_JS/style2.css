@@ -1,0 +1,19 @@
+
+.tarjeta {
+    width: 220px;
+    padding: 15px;
+    margin: 15px auto;
+    background-color: #f0f0f0;
+    border: 2px solid #999;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+
+.tarjeta.importante {
+    border: 2px solid red;
+    background-color: #ffe5e5;
+    color: #b30000;
+    font-weight: bold;
+}

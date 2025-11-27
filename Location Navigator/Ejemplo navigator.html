@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo navigator</title>
+</head>
+<body>
+  <button onclick="mostrarInfoNavigator()">Mostrar información del navegador</button>
+  <pre id="navinfo"></pre>
+  <script>
+    function mostrarInfoNavigator() {
+      let salida =
+        "appName: " + navigator.appName + "\n" +
+        "appVersion: " + navigator.appVersion + "\n" +
+        "userAgent: " + navigator.userAgent + "\n" +
+        "platform: " + navigator.platform + "\n" +
+        "language: " + navigator.language + "\n" +
+        "cookies habilitadas: " + navigator.cookieEnabled + "\n";
+      document.getElementById("navinfo").textContent = salida;
+    }
+  </script>
+</body>
+</html>

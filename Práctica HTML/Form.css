@@ -1,0 +1,82 @@
+/* VARIABLES DE COLOR Y ESTILO */
+:root {
+  --bg: #00B6FF;         /* fondo cyan de la imagen */
+  --card-bg: #ffffff;    /* fondo blanco del recuadro */
+  --muted: #6f6f6f;      /* gris de los textos */
+  --input-border: #dcdcdc; /* borde inputs */
+  --btn-blue: #0254FE;   /* azul del botón */
+}
+
+/* Reset general */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--bg);   /* mismo color de la imagen */
+  display: flex;
+  justify-content: center; /* centrar horizontal */
+  align-items: flex-start; /* arriba, no en el centro */
+  min-height: 100vh;
+  padding: 30px 15px;      /* margen para que se vea el cyan alrededor */
+}
+
+/* Contenedor blanco (la tarjeta) */
+.container {
+  background: var(--card-bg);
+  padding: 20px;
+  border-radius: 6px;
+  width: 340px;   /* ancho fijo como en la foto */
+  box-shadow: 0 2px 0 rgba(0,0,0,0.06);
+  border: 1px solid rgba(0,0,0,0.04);
+}
+
+/* Etiquetas */
+.label {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+  margin: 6px 0 8px 0;
+}
+
+/* Inputs y textarea */
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 14px;
+  border: 1px solid var(--input-border);
+  border-radius: 3px;
+  margin-bottom: 14px;
+  outline: none;
+  transition: box-shadow .12s ease, border-color .12s ease;
+}
+.input:focus {
+  border-color: rgba(2,84,254,0.6);
+  box-shadow: 0 0 0 3px rgba(2,84,254,0.07);
+}
+textarea.input {
+  min-height: 86px;  /* altura similar a la foto */
+  resize: vertical;  /* que el usuario pueda agrandar solo en vertical */
+}
+
+/* Botón */
+#btn-blue {
+  display: block;
+  width: 70%;
+  margin: 10px auto;
+  padding: 12px 16px;
+  background: linear-gradient(180deg, var(--btn-blue), #003be0);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 0 rgba(0,0,0,0.06);
+}
+#btn-blue:hover {
+  filter: brightness(0.96);
+}
+#btn-blue:active {
+  transform: translateY(1px);
+}

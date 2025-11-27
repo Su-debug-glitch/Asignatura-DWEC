@@ -1,0 +1,24 @@
+.mi-form input {
+  display:block;
+  width: 50%;
+  max-width: 420px;
+  padding: 8px 10px;
+  margin: 8px 0 16px;
+  font-size: 12px;
+  border-radius: 6px;
+  border: 1px solid #cfcfcf;
+  background: #fff;
+}
+
+.mi-form input[type="email"] {
+  border-style:inset;
+  border-width: 2px;
+  border-color: #9d588c;     
+  background: #ecd8e7;  
+}
+
+.mi-form input:focus {
+  outline: none; 
+  border-color: #e2ace8; 
+  box-shadow: 0 0 0 4px rgba(59,130,246,0.12); 
+}

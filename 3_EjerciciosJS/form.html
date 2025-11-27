@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="form.js"></script>
+    <title>Formulario</title>
+</head>
+<body>
+    <h1>Formulario de usuario</h1>
+    <form action="post">
+        <label for="nombre">Nombre</label><br>
+        <input type="text" name="nombre" id="nombre" placeholder="Tu nombre"><br><br>
+        <label for="apellidos">Apellidos</label><br>
+        <input type="text" name="apellidos" id="apellidos" placeholder="Tus apellidos"><br><br>
+        <label for="edad">Edad:</label><br>
+        <select name="edad" id="edad">
+            <option value="Entre 0-18">Entre 0-18</option>
+            <option value="Entre 18-25">Entre 18 y 25</option>
+            <option value="Entre 25-30">Entre 25 y 30</option>
+            <option value="+30">Mayor de 30</option>
+        </select><br><br>
+        <label for="localidad">Localidad:</label><br>
+        <input type="text" name="localidad" id="localidad"><br><br>
+        <input type="button" onclick="infoUsuario()" id="info" value="INFO">
+        <input type="button" onclick="resetForm()" id="reset" value="RESET">
+    </form>
+</body>
+</html>

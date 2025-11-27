@@ -1,0 +1,62 @@
+/* Fuente y colores generales */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f3f6fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Contenedor centrado */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+}
+
+/* Título principal */
+h1 {
+    color: #1e88e5;
+    margin-bottom: 10px;
+}
+
+/* Párrafo introductorio */
+p {
+    margin-bottom: 20px;
+    font-size: 1.1em;
+}
+
+/* Contenedor del resultado */
+#resultado {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+/* Subtítulo (Tabla del X) */
+#resultado h2 {
+    color: #1565c0;
+    text-align: center;
+}
+
+/* Cada línea de la tabla */
+#resultado p {
+    font-size: 1.1em;
+    margin: 5px 0;
+}
+
+/* Animación de entrada suave */
+#resultado {
+    opacity: 0;
+    animation: aparecer 0.8s ease-out forwards;
+}
+
+@keyframes aparecer {
+    to {
+        opacity: 1;
+    }
+}

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo document forms[] y links[] con CSS interno</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #f7fafd;
+      margin: 0;
+      padding: 2rem 0;
+      color: #20304A;
+    }
+    form {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 2px 12px #b7e2ff38;
+      padding: 1.2rem 2.2rem;
+      margin: 1rem auto;
+      max-width: 330px;
+      display: block;
+    }
+    input[type="text"], input[type="email"] {
+      padding: 0.5rem;
+      margin-bottom: 0.9rem;
+      border-radius: 6px;
+      border: 1px solid #b4dcff;
+      width: 96%;
+      font-size: 1rem;
+      box-sizing: border-box;
+    }
+    input[type="submit"] {
+      background: #2572ea;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 0.7rem 1.3rem;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.23s;
+    }
+    input[type="submit"]:hover {
+      background: #1453ac;
+    }
+    a {
+      color: #1453ac;
+      text-decoration: underline;
+      font-weight: 600;
+      margin: 0 8px;
+      transition: color .2s;
+    }
+    a:hover {
+      color: #e32959;
+    }
+    button {
+      margin: 2rem 0 1.5rem 0;
+      padding: .7rem 1.5rem;
+      background: #0575e6;
+      color: #fff;
+      border-radius: 9px;
+      border: none;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background .2s;
+      font-weight: bold;
+      box-shadow: 0 1px 7px #2572ea30;
+    }
+    button:hover {
+      background: #05589f;
+    }
+    pre {
+      background: #eaf7ff;
+      border-radius: 13px;
+      font-size: 1.05rem;
+      padding: 1.3rem;
+      box-shadow: 0 1px 8px #c7eaff30;
+      max-width: 600px;
+      margin: auto;
+      margin-bottom: 2rem;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <form name="formulario1">
+    Nombre: <input type="text" name="nombre">
+    <br>
+    <input type="submit" value="Enviar" name="boton">
+  </form>
+
+  <form name="formulario2">
+    Email: <input type="email" name="email">
+    <br>
+    <input type="submit" value="Enviar">
+  </form>
+
+  <div style="text-align:center;">
+    <a href="https://www.example.com" target="_blank">Ir a Example</a>
+    <a href="https://www.google.com" target="_blank">Ir a Google</a>
+    <br>
+    <button onclick="mostrarInfoDocument()">Mostrar info de forms[] y links[]</button>
+  </div>
+  <pre id="salida"></pre>
+
+  <script>
+    function mostrarInfoDocument() {
+      let salida = '';
+
+      // Acceso al array de formularios
+      salida += 'Número de formularios: ' + document.forms.length + '\n';
+      for(let i=0; i < document.forms.length; i++) {
+        salida += 'Formulario ' + (i+1) + ' name: ' + document.forms[i].name + '\n';
+        // Acceso a campos por name
+        for(let j=0; j < document.forms[i].elements.length; j++) {
+          salida += '  Campo: ' + document.forms[i].elements[j].name + '\n';
+        }
+      }
+
+      // Acceso al array de links/anchors
+      salida += '\nNúmero de enlaces: ' + document.links.length + '\n';
+      for(let k=0; k < document.links.length; k++) {
+        salida += 'Enlace ' + (k+1) + ' href: ' + document.links[k].href + '\n';
+      }
+
+      document.getElementById("salida").textContent = salida;
+    }
+  </script>
+</body>
+</html>

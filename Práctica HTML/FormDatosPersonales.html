@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" dir="ltr">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+    <form action="" method="post">
+        <fieldset>
+            <legend>Datos Personales</legend>
+            <table>
+                    <tr>
+                    <td><label for="dni">D.N.I. </label></td>
+                    <td><input type="text" name="" id="dni" placeholder="Introduzca su D.N.I"></td>
+                    <td><label for="direccion">Dirección</label></td>
+                    <td><input type="text" name="" id="direccion"></td>
+                    <td><label for="email">E-mail</label></td>
+                    <td><input type="email" name="" id="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="nombre">Nombre</label></td>
+                        <td><input type="text" name="" id="nombre"></td>
+                        <td><label for="provincia">Provincia</label></td>
+                        <td>
+                            <select>
+                                <option>Álava</option>
+                                <option>Barcelona</option>
+                                <option>Madrid</option>
+                                <option>Valencia</option>
+                                <option>Otra</option>
+                            </select>
+                        </td>
+                        <td><label for="telefono">Teléfono</label></td>
+                        <td><input type="text" name="" id="telefono"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="apellidos">Apellidos</label></td>
+                        <td><input type="text" id="apellidos"></td>
+                        <td><label for="localidad">Localidad</label></td>
+                        <td><input type="text" id="localidad" placeholder="Localidad..."></td>
+                        <td><label for="sexo">Sexo:</label></td>
+                        <td><input type="radio" name="sexo" id="hombre" value="Hombre"> Hombre</td>
+                    </tr>
+                    <tr>
+                        <td colspan="5"></td>
+                        <td><input type="radio" name="sexo" id="mujer" value="Mujer"> Mujer</td>
+                    </tr>
+                        <td colspan="2"></td>
+                        <td><label for="cp">C.P.</label></td>
+                        <td><input type="text" id="cp" name="cp"></td>
+                        <td></td><td></td><td></td><td></td>
+                    </tr>
+            </table>
+        </fieldset>
+            <legend>Confirmación de la cuenta</legend>
+            <table>
+                <tr>
+                    <td><label for="usuario">Usuario</label></td>
+                    <td><input type="text" name="" id="usuario"></td>
+                    <td><label for="password">Password</label></td>
+                    <td><input type="password" name="" id="password"></td>
+                </tr>
+                <tr>
+                    <td colspan="2"></td>
+                    <td><label for="confirmación">Confirmar password</label></td>
+                    <td><input type="password" name="" id="confirmación"></td>
+                </tr>
+            </table>
+
+            <fieldset>
+                <legend>Preferencias</legend>
+                <table>
+                    <tr>
+                        <td><label for="conexion">Conexión</label></td>
+                        <td><select name="" id="conexion">
+                            <option>ADSL</option>
+                            <option>Fibra Óptica</option>
+                            <option>WiFi</option>
+                        </select></td>
+                        <td><label for="navegador">Navegador:</label></td>
+                        <td><label for="firefox">Firefox</label></td>
+                        <td><input type="checkbox" name="nav" id="firefox"></td>
+                        <td><label for="ie">IE</label></td>
+                        <td><input type="checkbox" name="nav" id="ie"></td>
+                    </tr>
+                      <tr>
+                    <td><span>Recibir publicidad: </span></td>
+                    <td>
+                        <label for="si">Si</label>
+                        <input type="radio" name="rp" id="si">
+                        <label for="no">No</label>
+                        <input type="radio" name="rp" id="no">
+                    </td>
+                    <td></td>
+                    <td><label for="op">Opera</label></td>
+                    <td><input type="checkbox" name="nav" id="op"></td>
+                    <td><label for="sf">Safari</label></td>
+                    <td><input type="checkbox" name="nav" id="sf"></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3"></td>
+                        <td><label for="chrome">Chrome</label></td>
+                        <td><input type="checkbox" name="nav" id="chrome"></td>
+                        <td><label for="otras"></label>Otras</td>
+                        <td><input type="checkbox" name="nav" id="otras"></td>
+                    </tr>
+                </table>
+            </fieldset>
+            <div style="margin-left: 420px; margin-top: 40px;">
+            <label for="terminos">Acepto Términos</label>
+            <input type="checkbox" id="terminos">
+           </div>
+            <div style="margin-left: 380px; margin-top: 40px;">
+            <label for="enviar"></label>
+            <input type="submit" name="enviar" id="enviar" value="Enviar">
+            <input type="reset" name="reset" id="reset" value="Restablecer">
+           
+            </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Ejemplo objeto location</title>
+</head>
+<body>
+  <h2>Propiedades del objeto location</h2>
+  <button onclick="mostrarInfoLocation()">Mostrar información de la URL</button>
+  <pre id="info"></pre>
+  <script>
+    function mostrarInfoLocation() {
+      let salida =
+        "location.href: " + location.href + "\n" +
+        "location.protocol: " + location.protocol + "\n" +
+        "location.host: " + location.host + "\n" +
+        "location.hostname: " + location.hostname + "\n" +
+        "location.port: " + location.port + "\n" +
+        "location.pathname: " + location.pathname + "\n" +
+        "location.search: " + location.search + "\n" +
+        "location.hash: " + location.hash + "\n";
+      document.getElementById("info").textContent = salida;
+    }
+  </script>
+</body>
+</html>

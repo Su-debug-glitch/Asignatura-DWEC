@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ejemplo addEventListener</title>
+  <style>
+    .resaltado {
+      background-color: yellow;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="miBoton">Haz clic aquí</button>
+  <p id="mensaje"></p>
+
+  <script>
+    const boton = document.getElementById("miBoton");
+    const mensaje = document.getElementById("mensaje");
+
+    // Evento 2: Cambiar el texto y estilo del párrafo
+    boton.addEventListener("click", () => {
+      mensaje.textContent = "¡Has hecho clic en el botón!";
+      mensaje.classList.toggle("resaltado");
+    });
+
+
+    // Evento 1: Mostrar alerta al hacer clic
+    boton.addEventListener("click", () => {
+      alert("Botón pulsado 1");
+    });
+
+    
+  </script>
+
+</body>
+</html>

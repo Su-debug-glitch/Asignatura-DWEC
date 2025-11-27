@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="ej1-form.js"></script>
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <h1 style="text-align: center;">Formulario de registro</h1>
+    <fieldset>
+        <legend>Registro</legend>
+            <form action="post">
+                <table>
+                    <tr>
+                        <td><label for="nombre"><b>Nombre:</b></label>
+                        <td><input type="text" name="nombre" id="nombre" size="40"required></td>
+                    </tr> 
+                    <tr>
+                        <td><label for="apellido"><b>Apellido:</b></label></td>
+                        <td><input type="text" name="apellido" id="apellido" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email"><b>Email:</b></label></td>
+                        <td><input type="email" name="email" id="email" size="40" placeholder="...@..." required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="password"><b>Password:</b></label></td>
+                        <td><input type="password" name="password" id="password" size="40"></td>
+                    </tr>
+                    <tr>
+                        <td style="vertical-align: top;"><label for="comentarios"><b>Comentarios:</b></label></td>
+                        <td><textarea name="comentarios" id="comentarios" cols="42" rows="7" required></textarea></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="checkbox" name="condiciones" id="condiciones">
+                            <label for="condiciones"><b>Acepto las condiciones del servicio.</b></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" onclick="validarFormulario()" value="Enviar"></td>
+                    </tr>
+            </table>
+            </form>
+    </fieldset>
+</body>
+</html>

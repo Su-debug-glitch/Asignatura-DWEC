@@ -1,0 +1,190 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f8f8fc;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #255180;
+    color: #fff;
+    padding: 25px 0 10px 0;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+figure img {
+    width: 60px;
+    height: 60px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 12px;
+}
+
+nav ul li a {
+    color: #fafdff;
+    text-decoration: none;
+    font-weight: normal;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+main {
+    width: 72%;
+    float: left;
+    padding: 30px 30px 30px 40px;
+    background: #fff;
+    min-height: 600px;
+    box-sizing: border-box;
+}
+
+aside {
+    width: 28%;
+    float:right;
+    background: #f3f6fa;
+    padding: 30px 15px 30px 15px;
+    box-sizing: border-box;
+    min-height: 810px;
+}
+
+section, article {
+    margin-bottom: 32px;
+    border-bottom: 1px solid #e2e2e2;
+    padding-bottom: 22px;
+}
+
+article header {
+    background: none;
+    color: #222;
+    padding: 0;
+    text-align: left;
+}
+
+h2 {
+    color: #255180;
+    margin-bottom: 6px;
+}
+
+p {
+    margin-top: 4px;
+    margin-bottom: 10px;
+}
+
+mark {
+    background: #fffad2;
+    padding: 0 2px;
+}
+
+address, time {
+    font-size: 0.96em;
+    color: #535353;
+    font-style: italic;
+    display: block;
+    margin-bottom: 6px;
+    margin-top: 0;
+}
+
+figure {
+    margin: 8px 0;
+}
+
+figcaption {
+    font-size: 0.96em;
+    color: #333;
+}
+
+blockquote {
+    margin: 10px 0;
+    padding: 7px 18px;
+    border-left: 3px solid #4ea9de;
+    color: #185277;
+    font-style: italic;
+    background: #eef4fb;
+}
+
+pre, code {
+    background: #eef3fa;
+    color: #295191;
+    padding: 4px 8px;
+    border-radius: 3px;
+    font-family: 'Consolas', monospace;
+    white-space: pre-wrap;
+    display: block;
+    margin: 6px 0;
+}
+
+aside h3 {
+    color: #1e4172;
+    margin-bottom: 10px;
+}
+
+aside ul {
+    list-style: square;
+    margin: 0 0 12px 18px;
+    padding: 0;
+}
+
+form {
+    margin: 14px 0 0 0;
+}
+
+form label {
+    display: block;
+    margin-bottom: 4px;
+}
+
+input[type="email"] {
+    width: 90%;
+    padding: 5px 6px;
+    border: 1px solid #bbb;
+    border-radius: 3px;
+    margin-bottom: 8px;
+}
+
+button[type="submit"] {
+    background: #255180;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    padding: 6px 18px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background: #163151;
+}
+
+footer {
+    clear: both;
+    background: #255180;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 14px 0;
+    margin-top: 32px;
+    font-size: 1em;
+}
+
+footer a {
+    color: #4ea9de;
+    text-decoration: underline;
+}
+
+footer address {
+    font-style: oblique;
+    color: #bdbdbd;
+}

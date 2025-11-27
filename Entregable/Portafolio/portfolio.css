@@ -1,0 +1,150 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f9f9f9;
+    color: #323131;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #27408b;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 10px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+main {
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+section {
+    background: #fff;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgba(40,40,40,0.07);
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #6782d4;
+}
+
+h3 {
+    color: #3949ab;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 7px 10px;
+    text-align: left;
+}
+
+th {
+    background: #e0e7fa;
+}
+
+figure {
+    margin: 15px 12px;
+    display: inline-block;
+    width: 230px;
+}
+
+figure img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+figcaption {
+    font-size: 0.95rem;
+    color: #444;
+    margin-top: 5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    padding: 4px 7px;
+    font-size: 1em;
+    background: #fafbfc;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+label.checkbox {
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+
+
+input[type="checkbox"]:checked + label {
+    background-color: #6782d4;
+    border-color: #6782d4;
+    color:white;
+}
+
+textarea {
+    min-height: 70px;
+}
+
+button[type="submit"] {
+    background: #27408b;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 8px 0;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+button[type="submit"]:hover {
+    background: #213469;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.95em;
+    color: #777;
+    background: #e0e7fa;
+    padding: 15px 0 5px 0;
+    margin-top: 40px;
+}
+

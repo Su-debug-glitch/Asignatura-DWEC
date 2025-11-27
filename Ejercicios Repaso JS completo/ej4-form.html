@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ej4.css">
+    <script src="ej4-form.js"></script>
+    <title>Formulario de registro</title>
+</head>
+<body>
+    <h1>REGISTRO CLIENTE</h1>
+<form>
+    <fieldset>
+        <table>
+            <tr>
+                <td>Nombre:</td>
+                <td><input type="text" id="nombre"></td>
+            </tr>
+            <tr>
+                <td>Primer Apellido:</td>
+                <td><input type="text" id="apellido1"></td>
+            </tr>
+            <tr>
+                <td>Segundo Apellido:</td>
+                <td><input type="text" id="apellido2"></td>
+            </tr>
+            <tr>
+                <td>Teléfono de contacto:</td>
+                <td><input type="text" id="telefono"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" id="email"></td>
+            </tr>
+            <tr>
+                <td>Tipo de tarjeta:</td>
+                <td>
+                    <select name="tarjeta" id="tarjeta">
+                        <option value="visa">Visa</option>
+                        <option value="amExpr">American Express</option>
+                        <option value="revoult">Revoult</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Número de Tarjeta:</td>
+                <td><input type="text" id="numTarjeta"></td>
+            </tr>
+            <tr>
+                <td>Nombre de Usuario:</td>
+                <td><input type="text" id="nombreUs"></td>
+            </tr>
+            <tr>
+                <td>Contraseña:</td>
+                <td><input type="password" id="password"></td>
+            </tr>
+            <tr>
+                <td>Verificar Contraseña:</td>
+                <td><input type="password" id="passwordVerif"></td>
+            </tr>
+        </table>
+    </fieldset>
+
+    <div class="botones">
+    <input type="button" value="Enviar" onclick="enviarForm()">
+    <input type="reset" id="borrar" value="Borrar">
+    </div>
+</form>
+</body>
+</html>

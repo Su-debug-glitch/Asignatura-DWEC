@@ -1,0 +1,34 @@
+/* Estilo general del contenedor */
+#perfil {
+    width: 250px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f4f4f4;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+}
+
+/* Estilo de la imagen */
+#perfil .imagen {
+    width: 120px;
+    height: 120px;
+    border-radius: 25%;    /* redonda */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border: 2px solid #888;
+}
+
+/* Estilo del título */
+#perfil .nombre {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: violet;
+}
+
+/* Estilo de la descripción */
+#perfil .descripcion {
+    font-size: 0.95rem;
+    color: #555;
+}

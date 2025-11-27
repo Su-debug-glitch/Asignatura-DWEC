@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnología - Juan Pérez</title>
+    <link rel="stylesheet" href="blog.css">
+</head>
+<body>
+    <header>
+        <h1>Blog de Tecnología</h1>
+        <nav>
+            <ul>
+                <li><a href="#articulo1">Primer Artículo</a></li>
+                <li><a href="#articulo2">Segundo Artículo</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <article id="articulo1">
+                <header>
+                    <h2>Introducción a Kotlin</h2>
+                    <p>por </p> <i>Juan Pérez</i><br>
+
+                    <time datetime="2025-10-01">el 1 de octubre de 2025</time>
+                </header>
+
+                <figure>
+                    <img src="logo-kotlin.jpg" alt="Logo Kotlin">
+                    <figcaption>Logo oficial de Kotlin</figcaption>
+                </figure>
+                <p>
+                    Kotlin es un lenguaje moderno, <mark>estático y seguro</mark>, pensado para JVM y multiplataforma.
+                </p>
+                <pre>
+                    fun main() {
+                        println("Hola Mundo")
+                    }
+                </pre>
+                <blockquote>
+                    "Kotlin es el lenguaje del futuro para desarrollo Android." - Fuente oficial
+                </blockquote>
+            </article>
+
+            <article id="articulo2">
+                <header>
+                    <h2>HTML semántico avanzado</h2>
+                    <address>
+                        por <strong>Juan Pérez</strong>
+                    </address>
+                    <time datetime="2025-08-25">el 25 de agosto de 2025</time>
+                </header>
+                <figure>
+                    <img src="logo-html5.jpg" alt="Logo HTML5">
+                    <figcaption>HTML5, lenguaje estructurado y accesible</figcaption>
+                </figure>
+                <p>
+                    HTML5 incorpora muchas etiquetas semánticas como <strong>&lt;article&gt;</strong>, <strong>&lt;section&gt;</strong> y <strong>&lt;nav&gt;</strong>.
+                </p>
+                <p>
+                    <small> Aprende a usar cada etiqueta para mejorar la accesibilidad y SEO.</small>
+                </p>
+            </article>
+        </section>
+    </main>
+
+    <aside>
+            <section>
+                <h3>Categorías</h3>
+                <ul>
+                    <li><a href="#">Kotlin</a></li>
+                    <li><a href="#">HTML</a></li>
+                </ul>
+            </section>
+            <section>
+                <h3>Suscríbete</h3>
+                <form>
+                    <label for="email">Correo electrónico:</label>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <button type="submit">Suscribirse</button>
+                </form>
+            </section>
+        </aside>
+
+    <footer>
+        <p>© 2025 Juan Pérez</p>
+        <section id="contacto">
+            <span>Redes sociales: </span>
+            <a href="#">Twitter</a> |
+            <a href="#">LinkedIn</a>
+        <address>
+            Contacto: juan.perez@email.com
+        </address>
+        </section>
+    </footer>
+</body>
+</html>
