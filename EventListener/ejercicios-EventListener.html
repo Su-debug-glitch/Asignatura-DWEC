@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios EventListener</title>
+    <style>
+    body {
+        font-family: system-ui, sans-serif;
+        margin: 0;
+        padding: 1.5rem;
+        background: #f5f5f5;
+    }
+    h2 {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    section {
+        background: #fff;
+        border-radius: 8px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: 1rem;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    section h2 {
+        margin-top: 0;
+    }
+
+    div#areaTexto {
+        background-color: #e3e9f5;
+        margin-top: 1rem;
+        padding: 1rem;
+        width: 95%;
+        max-width: 100%;
+        min-height: 60px;
+        border: 0.5px solid black;
+        border-radius: 10px;
+    }
+
+    button {
+        padding: 5px;
+        border-radius: 5px;
+        background-color: rgb(211, 228, 243);
+        cursor: pointer;
+    }
+
+    .oculta {
+        display: none;
+    }
+
+    .layout-lateral {
+        display: flex;
+        gap: 2rem;
+        align-items: flex-start;
+        padding: 0.5rem 0;
+    }
+
+    .layout-lateral form {
+        width: 160px;
+        font-size: 0.8rem;
+    }
+
+    .layout-lateral label {
+        display: block;
+        margin-bottom: 0.2rem;
+    }
+
+    .layout-lateral input {
+        width: 100%;
+        margin-bottom: 0.4rem;
+    }
+
+    #resumen {
+        flex: 1;
+        border: 1px solid #ddd;
+        padding: 0.7rem 1rem;
+        border-radius: 3px;
+        background: #fafafa;
+        font-size: 0.8rem;
+    }
+
+    #resumen h3 {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    #resColor {
+        height: 20px;
+        margin-top: 0.6rem;
+        border-radius: 3px;
+    }   
+
+    table {
+        border-collapse: collapse;
+    }
+
+    th {
+        text-align: center;
+        padding: 0.5rem 1.5rem;
+    }
+
+    td, th {
+        border: 1px solid rgb(171, 171, 171);
+    }
+
+    td {
+        padding: 10px;
+    }
+
+    #contenedorBarra {
+        background-color: #ddd;
+        height: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        overflow: hidden;
+    }
+
+    div#rellenoBarra {
+        background-color: rgb(136, 205, 136);
+        width: 0%;
+        height: 100%;
+        border-radius: 10px;
+        transition: width 0.1s linear;
+    }
+
+    #rellenoBarra.alto {
+        background-color: #e7c45a;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <section>
+        <h2>1. Mostrar/Ocultar secciones</h2>
+        <p>Pulsa un botón para mostrar solo la sección correspondiente.</p>
+        <button id="btnNoticias">Mostrar noticias</button>
+        <button id="btnEventos">Mostrar eventos</button>
+        <button id="btnContacto">Mostrar contacto</button>
+        <section class="activa" id="secNoticias">
+            <h3>Noticias</h3>
+            <p>últimas noticias de la empresa, lanzamientos, y comunicados oficiales.</p>
+        </section>
+        <section class="oculta" id="secEventos">
+            <h3>Eventos</h3>
+            <p>Fechas de nuevos eventos de la empresa, descripción del evento, lugar de celebración.</p>
+        </section>
+        <section class="oculta" id="secContacto">
+            <h3>Contacto</h3>
+            <p>Para contactar con la empresa, el teléfono es 666666666, y el email empresa@gmail.com</p>
+        </section>
+    </section>
+
+    <section>
+        <h2>2. Controles de tamaño de fuente</h2>
+        <p>Usa los botones para aumentar, disminuir o restablecer el tamaño de la letra del texto siguiente.</p>
+        <button id="btnAumento">A+</button>
+        <button id="btnDisminuye">A-</button>
+        <button id="btnReset">Reset</button>
+        <div id="areaTexto">
+            <p>Este es un texto de ejemplo que simula un bloque de condiciones de uso o política de privacidad. 
+                El usuario puede ajustar el tamaño de la letra según sus preferencias.</p>
+            <p>
+                Practicamos el uso de addEventListener cambiando propiedades de estilo desde JS de forma controlada.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Formulario de registro con resumen en vivo</h2>
+        <div class="layout-lateral">
+        <form action="#">
+            <label for="usuario">Usuario:</label>
+            <input type="text" name="" id="usuario">
+            <label for="email">Email:</label>
+            <input type="email" name="" id="correo">
+            <label for="color">Color favorito:</label>
+            <input type="color" name="" id="color">
+        </form>
+        <div id="resumen">
+            <h3>Resumen:</h3>
+            <p><strong>Usuario: </strong><span id="resUsuario"></span></p>
+            <p><strong>Email: </strong><span id="resCorreo"></span></p>
+            <p><strong>Color favorito:</strong></p>
+            <div id="resColor"></div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>4. Lista de productos con total</h2>
+        <table>
+            <thead>
+                <th scope="col">Seleccionar</th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio (€)</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="checkbox" class="seleccionado" data-precio="20"></td>
+                    <td>Teclado</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="seleccionado" data-precio="10"></td>
+                    <td>Ratón</td>
+                    <td>10</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="seleccionado" data-precio="150"></td>
+                    <td>Monitor</td>
+                    <td>150</td>
+                </tr>
+                <tr>
+                    <td><input type="checkbox" class="seleccionado" data-precio="50"></td>
+                    <td>Auriculares</td>
+                    <td>50</td>
+                </tr>
+            </tbody>
+        </table>
+        <p id="total">Total: 0€</p>
+    </section>
+
+    <section>
+        <h2>5. Barra de progreso</h2>
+        Progreso: <input type="range" id="barraControl" min="0" max="100" value="0"> 
+        <span id="porcentaje">0%</span>
+        <div id="contenedorBarra">
+            <div id="rellenoBarra"></div>
+        </div>
+    </section>
+
+    <script>
+        //Ejercicio 1 - Mostrar/ocultar secciones
+        const btnNoticias = document.getElementById('btnNoticias');
+        const btnEventos = document.getElementById('btnEventos');
+        const btnContacto = document.getElementById('btnContacto');
+
+        const secNoticias = document.getElementById('secNoticias');
+        const secEventos = document.getElementById('secEventos');
+        const secContacto = document.getElementById('secContacto');
+
+        function mostrarSolo(seccion) {
+            secNoticias.classList.add('oculta');
+            secEventos.classList.add('oculta');
+            secContacto.classList.add('oculta');
+
+
+            seccion.classList.remove('oculta');
+        }
+
+        btnNoticias.addEventListener('click', () => {
+            mostrarSolo(secNoticias);
+        })
+
+        btnEventos.addEventListener('click', () => {
+            mostrarSolo(secEventos);
+        })
+
+        btnContacto.addEventListener('click', () => {
+            mostrarSolo(secContacto);
+        })
+
+        //Ejercicio 2 - Control de tamaño de fuente
+        const btnAumento = document.getElementById('btnAumento');
+        const btnDisminuye = document.getElementById('btnDisminuye');
+        const btnReset = document.getElementById('btnReset');
+        const areaTexto = document.getElementById('areaTexto');
+
+        let actualSize = 16;
+        const minSize = 12;
+        const maxSize = 32;
+
+        areaTexto.style.fontSize = actualSize + 'px';
+
+
+        btnAumento.addEventListener('click', () => {
+            if (actualSize < maxSize) {
+                actualSize += 2;
+                areaTexto.style.fontSize = actualSize + 'px';
+            }
+        })
+
+        btnDisminuye.addEventListener('click', () => {
+            if (actualSize > minSize) {
+                actualSize -= 2;
+                areaTexto.style.fontSize = actualSize + 'px';
+            }
+        })
+
+        btnReset.addEventListener('click', () =>{
+            actualSize = 16;
+            areaTexto.style.fontSize = actualSize + 'px';
+        })
+
+        //Ejercicio 3 - Formulario y resumen en vivo
+        const inputUsuario = document.getElementById('usuario');
+        const inputCorreo = document.getElementById('correo');
+        const inputColor = document.getElementById('color');
+
+        const resUsuario = document.getElementById('resUsuario');
+        const resCorreo = document.getElementById('resCorreo');
+        const resColor = document.getElementById('resColor');
+
+        inputUsuario.addEventListener('input', () => {
+            resUsuario.textContent = inputUsuario.value;
+        })
+        inputCorreo.addEventListener('input', () => {
+            resCorreo.textContent = inputCorreo.value;
+        })
+        inputColor.addEventListener('input', () => {
+            resColor.style.backgroundColor = inputColor.value;
+        })
+
+        //Ejercicio 4 - Carrito de la compra
+        const checkboxes = document.querySelectorAll('.seleccionado');
+        const totalTexto = document.getElementById('total');
+
+        function calcularTotal() {
+            let total = 0;
+
+            checkboxes.forEach(chk => {
+                if (chk.checked) {
+                    total += Number(chk.dataset.precio);
+                }
+            })
+
+            totalTexto.textContent = `Total: ${total}€`;
+        }
+
+        checkboxes.forEach(chk => {
+            chk.addEventListener('change', calcularTotal);
+        })
+
+        //Ejercicio 5 - Barra de progreso
+        const barraControl = document.getElementById('barraControl');
+        const rellenoBarra = document.getElementById('rellenoBarra');
+        const spanPorcentaje = document.getElementById('porcentaje');
+
+        barraControl.addEventListener('input', () =>{
+            const valor = barraControl.value;
+
+            rellenoBarra.style.width = valor + '%';
+
+            spanPorcentaje.textContent = valor + '%';
+
+            if (valor >= 70) {
+                rellenoBarra.classList.add('alto');
+            } else {
+                rellenoBarra.classList.remove('alto');
+            }
+        })
+
+    </script>
+</body>
+</html>

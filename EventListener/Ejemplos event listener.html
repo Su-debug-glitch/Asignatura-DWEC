@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Ejemplos addEventListener</title>
+  <style>
+    body {
+      font-family: system-ui, sans-serif;
+      margin: 0;
+      padding: 1.5rem;
+      background: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    section {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    }
+    section h2 {
+      margin-top: 0;
+    }
+    textarea {
+      width: 100%;
+      max-width: 100%;
+      min-height: 60px;
+    }
+    .modo-oscuro {
+      background: #111;
+      color: #f5f5f5;
+    }
+    .completada {
+      text-decoration: line-through;
+      color: gray;
+    }
+    #miniaturas img {
+      cursor: pointer;
+      border: 2px solid transparent;
+      margin-right: 4px;
+    }
+    #miniaturas img:hover {
+      border-color: #2196f3;
+    }
+  </style>
+</head>
+<body>
+  <h1>Ejemplos de addEventListener</h1>
+
+  <!-- EJEMPLO 1: Botón tema claro/oscuro -->
+  <section>
+    <h2>1. Cambiar tema claro/oscuro</h2>
+    <p>Pulsa el botón para alternar entre tema claro y oscuro (añade/quita una clase en el body).</p>
+    <button id="btnTema">Cambiar tema</button>
+  </section>
+
+  <!-- EJEMPLO 2: Contador de caracteres en textarea -->
+  <section>
+    <h2>2. Contador de caracteres en tiempo real</h2>
+    <label>
+      Descripción:<br>
+      <textarea id="descripcion" maxlength="200"></textarea>
+    </label>
+    <p id="contador">0 / 200</p>
+  </section>
+
+  <!-- EJEMPLO 3: Lista de tareas con marcar completadas -->
+  <section>
+    <h2>3. Lista de tareas (marcar completadas)</h2>
+    <p>Haz clic en una tarea para marcarla o desmarcarla como completada.</p>
+    <ul id="tareas">
+      <li>Tarea 1: Preparar presentación</li>
+      <li>Tarea 2: Diseñar nueva landing</li>
+      <li>Tarea 3: Revisar estilos CSS</li>
+      <li>Tarea 4: Subir cambios a Git</li>
+    </ul>
+  </section>
+
+  <!-- EJEMPLO 4: Validación sencilla de email al perder foco -->
+  <section>
+    <h2>4. Validación básica de email (blur)</h2>
+    <label>
+      Email:
+      <input type="email" id="email">
+    </label>
+    <p id="mensajeEmail"></p>
+  </section>
+
+  <!-- EJEMPLO 5: Galería de imágenes sencilla -->
+  <section>
+    <h2>5. Galería sencilla con miniaturas</h2>
+    <p>Haz clic en una miniatura para cambiar la imagen grande.</p>
+    <img id="principal" src="https://picsum.photos/300/200?random=1" alt="Grande" width="300">
+    <div id="miniaturas">
+      <img data-src="https://picsum.photos/300/200?random=1" src="https://picsum.photos/80/60?random=1" alt="1" width="80">
+      <img data-src="https://picsum.photos/300/200?random=2" src="https://picsum.photos/80/60?random=2" alt="2" width="80">
+      <img data-src="https://picsum.photos/300/200?random=3" src="https://picsum.photos/80/60?random=3" alt="3" width="80">
+      <img data-src="https://picsum.photos/300/200?random=4" src="https://picsum.photos/80/60?random=4" alt="4" width="80">
+    </div>
+  </section>
+
+  <script>
+    // EJEMPLO 1: Cambiar tema
+    const btnTema = document.getElementById("btnTema");
+    const body = document.body;
+
+    btnTema.addEventListener("click", () => {
+      body.classList.toggle("modo-oscuro");
+    });
+
+    // EJEMPLO 2: Contador de caracteres
+    const area = document.getElementById("descripcion");
+    const contador = document.getElementById("contador");
+
+    area.addEventListener("input", () => {
+      const usados = area.value.length;
+      const max = area.maxLength;
+      contador.textContent = usados + " / " + max;
+    });
+
+    // EJEMPLO 3: Lista de tareas con delegación
+    const lista = document.getElementById("tareas");
+
+    lista.addEventListener("click", (event) => {
+      if (event.target.tagName === "LI") {
+        event.target.classList.toggle("completada");
+      }
+    });
+
+    // EJEMPLO 4: Validación sencilla de email
+    const inputEmail = document.getElementById("email");
+    const mensajeEmail = document.getElementById("mensajeEmail");
+
+    inputEmail.addEventListener("blur", () => {
+      const valor = inputEmail.value;
+      if (valor.includes("@") && valor.includes(".") && (valor.length()>6)) {
+        mensajeEmail.textContent = "Email válido";
+        mensajeEmail.style.color = "green";
+      } else {
+        mensajeEmail.textContent = "Email no válido";
+        mensajeEmail.style.color = "red";
+      }
+    });
+
+    // EJEMPLO 5: Galería con miniaturas
+    const principal = document.getElementById("principal");
+    const miniaturas = document.getElementById("miniaturas");
+
+    miniaturas.addEventListener("click", (event) => {
+      if (event.target.tagName === "IMG") {
+        const nuevaSrc = event.target.dataset.src;
+        principal.src = nuevaSrc;
+      }
+    });
+  </script>
+</body>
+</html>
